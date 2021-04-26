@@ -13,7 +13,13 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest]
         emacs_version: ['26.1', '26.2', '26.3', '27.1', '27.2']
-
+        exclude:
+          - os: windows-latest
+            emacs_version: 26.1
+          - os: windows-latest
+            emacs_version: 26.2
+          - os: windows-latest
+            emacs_version: 26.3
     steps:
     - name: Set up Emacs
       if: "!startsWith (matrix.os, 'windows')"
