@@ -20,6 +20,9 @@ jobs:
             emacs_version: 26.2
           - os: windows-latest
             emacs_version: 26.3
+        include:
+          - os: macos-latest
+            emacs_version: '27.2'
     steps:
     - name: Set up Emacs
       if: "!startsWith (matrix.os, 'windows')"
