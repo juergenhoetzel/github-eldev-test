@@ -42,4 +42,4 @@ jobs:
     - name: Checkout Eldev version
       run: |
         eldev --version
-
+        eldev test
