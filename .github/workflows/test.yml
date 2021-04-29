@@ -39,6 +39,8 @@ jobs:
     - name: Setup Eldev
       uses: juergenhoetzel/setup-eldev-emacs@master
 
+    - uses: actions/checkout@v2
+
     - name: Checkout Eldev version
       run: |
         eldev --version
